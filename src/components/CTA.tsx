@@ -3,7 +3,7 @@ import { Calendar, MessageSquare, Phone } from "lucide-react";
 
 export default function CTA() {
   return (
-    <section className="relative py-32 mx-6 md:mx-10 mb-32 rounded-xl overflow-hidden">
+    <section className="relative py-10 md:py-14 mx-4 md:mx-10 mb-10 md:mb-12 rounded-xl overflow-hidden">
       <img 
         className="absolute inset-0 w-full h-full object-cover" 
         src="https://picsum.photos/seed/karachi-night/1920/1080" 
@@ -15,23 +15,23 @@ export default function CTA() {
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        className="relative z-10 max-w-5xl mx-auto text-center px-6 md:px-10"
+        className="relative z-10 max-w-4xl mx-auto text-center px-4 md:px-8"
       >
-        <h2 className="font-headline text-5xl md:text-8xl font-black text-white mb-10 tracking-tighter leading-tight">
+        <h2 className="font-headline text-3xl md:text-5xl font-black text-white mb-4 md:mb-5 tracking-tighter leading-tight">
           Ready to fix your space?
         </h2>
-        <p className="text-emerald-100/70 text-xl md:text-2xl mb-16 max-w-3xl mx-auto font-medium">
+        <p className="text-emerald-100/70 text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto font-medium">
           Get an instant quote or book a professional technician in under 60 seconds.
         </p>
-        <div className="flex flex-wrap justify-center gap-6">
-          <button className="bg-primary text-on-primary px-12 py-6 rounded-xl font-black text-xl flex items-center gap-4 transition-transform hover:scale-105 active:scale-95 shadow-2xl shadow-primary/40 uppercase tracking-widest">
-            <Calendar className="w-6 h-6" /> Book Now
+        <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+          <button className="bg-primary text-on-primary px-6 md:px-8 py-3.5 md:py-4 rounded-xl font-black text-sm md:text-base flex items-center gap-2.5 transition-transform hover:scale-105 active:scale-95 shadow-xl shadow-primary/30 uppercase tracking-[0.14em]">
+            <Calendar className="w-5 h-5" /> Book Now
           </button>
-          <button className="bg-[#25D366] text-white px-12 py-6 rounded-xl font-black text-xl flex items-center gap-4 transition-transform hover:scale-105 active:scale-95 shadow-2xl shadow-green-500/30 uppercase tracking-widest">
-            <MessageSquare className="w-6 h-6" /> WhatsApp
+          <button className="bg-[#25D366] text-white px-6 md:px-8 py-3.5 md:py-4 rounded-xl font-black text-sm md:text-base flex items-center gap-2.5 transition-transform hover:scale-105 active:scale-95 shadow-xl shadow-green-500/20 uppercase tracking-[0.14em]">
+            <MessageSquare className="w-5 h-5" /> WhatsApp
           </button>
-          <button className="bg-white/10 backdrop-blur-xl text-white border-2 border-white/20 px-12 py-6 rounded-xl font-black text-xl flex items-center gap-4 transition-transform hover:scale-105 active:scale-95 uppercase tracking-widest">
-            <Phone className="w-6 h-6" /> 0800-PULSE
+          <button className="bg-white/10 backdrop-blur-xl text-white border-2 border-white/20 px-6 md:px-8 py-3.5 md:py-4 rounded-xl font-black text-sm md:text-base flex items-center gap-2.5 transition-transform hover:scale-105 active:scale-95 uppercase tracking-[0.14em]">
+            <Phone className="w-5 h-5" /> 0800-PULSE
           </button>
         </div>
       </motion.div>

@@ -24,19 +24,19 @@ const products = [
 
 export default function Shop() {
   return (
-    <section className="py-24 md:py-32 bg-surface-container-low">
+    <section className="py-10 md:py-14 bg-surface-container-low">
       <div className="max-w-[1440px] mx-auto px-6 md:px-10">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-8 md:mb-10 gap-4 md:gap-6">
           <div>
-            <h2 className="font-headline text-5xl font-extrabold mb-4 tracking-tighter">Shop & Get It Installed</h2>
-            <p className="text-on-surface-variant text-xl font-medium">Curated electronics with guaranteed professional setup.</p>
+            <h2 className="font-headline text-4xl md:text-5xl font-extrabold mb-3 tracking-tighter">Shop & Get It Installed</h2>
+            <p className="text-on-surface-variant text-base md:text-lg font-medium">Curated electronics with guaranteed professional setup.</p>
           </div>
-          <button className="text-primary font-black text-lg flex items-center gap-3 hover:translate-x-2 transition-transform uppercase tracking-widest">
-            Explore Full Shop <ArrowRight className="w-6 h-6" />
+          <button className="text-primary font-black text-base md:text-lg flex items-center gap-2.5 hover:translate-x-2 transition-transform uppercase tracking-widest">
+            Explore Full Shop <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {products.map((product, i) => (
             <motion.div 
               key={i}
@@ -44,11 +44,11 @@ export default function Shop() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-surface-container-lowest rounded-xl p-6 group shadow-lg"
+              className="bg-surface-container-lowest rounded-xl p-5 group shadow-lg border border-primary/10 card-hover-premium"
             >
-              <div className="relative rounded-xl overflow-hidden mb-6 aspect-video">
+              <div className="relative rounded-xl overflow-hidden mb-4 aspect-video">
                 <img 
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+                  className="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-90 transition-transform duration-700" 
                   src={product.img} 
                   alt={product.name}
                   referrerPolicy="no-referrer"
@@ -61,11 +61,11 @@ export default function Shop() {
                   ))}
                 </div>
               </div>
-              <h4 className="font-bold text-xl mb-3">{product.name}</h4>
+              <h4 className="font-bold text-lg md:text-xl mb-2 transition-colors duration-200 group-hover:text-white">{product.name}</h4>
               <div className="flex justify-between items-center">
-                <p className="text-primary font-black text-2xl">{product.price}</p>
-                <button className="w-14 h-14 rounded-xl bg-primary text-on-primary flex items-center justify-center transition-all hover:scale-110 hover:shadow-xl hover:shadow-primary/30">
-                  <ShoppingCart className="w-6 h-6" />
+                <p className="text-primary font-black text-xl md:text-2xl transition-colors duration-200 group-hover:text-white">{product.price}</p>
+                <button className="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center transition-all duration-200 hover:scale-110 hover:shadow-xl hover:shadow-primary/30 group-hover:bg-white/20 group-hover:text-white">
+                  <ShoppingCart className="w-5 h-5 card-logo-motion" />
                 </button>
               </div>
             </motion.div>

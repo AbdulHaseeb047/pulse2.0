@@ -33,6 +33,12 @@
 }
 
 @layer base {
+  html,
+  body,
+  #root {
+    @apply overflow-x-hidden;
+  }
+
   body {
     @apply bg-background font-body text-on-background selection:bg-primary-container selection:text-on-primary-container;
   }
@@ -65,6 +71,39 @@
 
   .diamond-shape {
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+
+  .marquee-outline {
+    -webkit-text-stroke: 1.5px #006947;
+    -webkit-text-fill-color: #ffffff;
+    color: #ffffff;
+  }
+
+  .marquee-outline-dot {
+    -webkit-text-stroke: 1px #006947;
+    -webkit-text-fill-color: #ffffff;
+    color: #ffffff;
+  }
+
+  .card-hover-premium {
+    transition: background-color 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease, transform 0.12s ease;
+  }
+
+  .card-hover-premium:hover {
+    background-image: linear-gradient(135deg, #006947 0%, #1f8a63 45%, #ffca4d 100%);
+    border-color: #8bf8c3;
+    box-shadow: 0 16px 36px rgba(0, 105, 71, 0.25);
+    transform: translateY(-4px);
+  }
+
+  .card-logo-motion {
+    transition: transform 0.12s ease, filter 0.12s ease;
+    transform-origin: center;
+  }
+
+  .group:hover .card-logo-motion {
+    transform: scale(1.1) rotate(-8deg);
+    filter: drop-shadow(0 0 10px rgba(255, 202, 77, 0.35));
   }
 }
 

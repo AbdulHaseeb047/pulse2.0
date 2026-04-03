@@ -23,13 +23,13 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="py-24 md:py-32 px-6 md:px-10 max-w-[1440px] mx-auto">
-      <div className="text-center mb-20">
-        <h2 className="font-headline text-5xl md:text-6xl font-extrabold mb-6 tracking-tighter">Professional Ecosystem</h2>
-        <p className="text-on-surface-variant font-semibold text-xl">Specialized solutions for every corner of your property.</p>
+    <section className="py-10 md:py-14 px-6 md:px-10 max-w-[1440px] mx-auto">
+      <div className="text-center mb-8 md:mb-10">
+        <h2 className="font-headline text-4xl md:text-5xl font-extrabold mb-4 tracking-tighter">Professional Ecosystem</h2>
+        <p className="text-on-surface-variant font-semibold text-base md:text-lg">Specialized solutions for every corner of your property.</p>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {services.map((service, i) => (
           <motion.div 
             key={i}
@@ -37,12 +37,12 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="bg-surface-container-lowest p-10 rounded-xl border border-transparent glow-hover transition-all group cursor-pointer"
+            className="bg-surface-container-lowest p-7 rounded-xl border border-primary/10 transition-all group cursor-pointer card-hover-premium"
           >
-            <service.icon className="w-12 h-12 text-primary mb-8" />
-            <h3 className="font-headline font-bold text-2xl mb-3">{service.title}</h3>
-            <p className="text-base text-on-surface-variant mb-8 leading-relaxed">{service.desc}</p>
-            <span className="inline-block bg-secondary-container text-on-secondary-container text-[11px] font-black px-4 py-1.5 rounded-full uppercase tracking-wider">
+            <service.icon className="w-10 h-10 text-primary mb-5 transition-colors duration-200 group-hover:text-white card-logo-motion" />
+            <h3 className="font-headline font-bold text-xl mb-2 transition-colors duration-200 group-hover:text-white">{service.title}</h3>
+            <p className="text-sm text-on-surface-variant mb-6 leading-relaxed transition-colors duration-200 group-hover:text-white/80">{service.desc}</p>
+            <span className="inline-block bg-secondary-container text-on-secondary-container text-[11px] font-black px-4 py-1.5 rounded-full uppercase tracking-wider transition-colors duration-200 group-hover:bg-white/15 group-hover:text-white group-hover:border group-hover:border-white/30">
               With or Without Materials
             </span>
           </motion.div>

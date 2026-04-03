@@ -13,7 +13,7 @@ import PulseAssistant from "./components/PulseAssistant";
 
 export default function App() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-x-hidden">
       <div className="bg-primary text-on-primary py-3 px-4 text-center text-[10px] md:text-xs font-label tracking-[0.2em] uppercase font-bold">
         Now serving all areas of Karachi — Free installation on selected electronics
       </div>
