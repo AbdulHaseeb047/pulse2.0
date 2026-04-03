@@ -1,0 +1,7 @@
+{
+  "name": "Emerald Pulse",
+  "description": "Karachi's premium digital destination for professional home services, AC maintenance, solar solutions, and smart electronics.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

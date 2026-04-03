@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,700;0,800;1,700;1,800&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-label: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #006947;
+  --color-primary-dim: #005c3d;
+  --color-primary-container: #8bf8c3;
+  --color-on-primary: #c9ffe0;
+  --color-on-primary-container: #005e3f;
+  
+  --color-secondary: #755700;
+  --color-secondary-container: #ffca4d;
+  --color-on-secondary-container: #5c4400;
+  
+  --color-background: #d8ffef;
+  --color-surface: #d8ffef;
+  --color-surface-container: #b2f6de;
+  --color-surface-container-low: #bffee7;
+  --color-surface-container-high: #a8f1d8;
+  --color-surface-container-highest: #9decd2;
+  --color-surface-container-lowest: #ffffff;
+  
+  --color-on-background: #00362a;
+  --color-on-surface: #00362a;
+  --color-on-surface-variant: #2f6555;
+  
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.5rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background font-body text-on-background selection:bg-primary-container selection:text-on-primary-container;
+  }
+}
+
+@layer utilities {
+  .glow-hover {
+    transition: all 0.3s ease;
+  }
+  .glow-hover:hover { 
+    box-shadow: 0 20px 40px rgba(0, 105, 71, 0.15); 
+    transform: translateY(-8px);
+  }
+  
+  .glass-card {
+    @apply backdrop-blur-2xl bg-surface-container-lowest/80 border border-white/40;
+  }
+
+  .nav-link {
+    @apply relative transition-colors;
+  }
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1.5 left-0 w-0 h-0.5 bg-primary-container transition-all duration-300;
+    box-shadow: 0 0 10px #8bf8c3;
+  }
+  .nav-link:hover::after, .nav-link.active::after {
+    @apply w-full;
+  }
+
+  .diamond-shape {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
