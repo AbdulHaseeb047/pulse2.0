@@ -3,7 +3,7 @@ import { Search, PlayCircle, Bolt } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="max-w-[1440px] mx-auto px-6 md:px-10 pt-6 md:pt-10 pb-10 md:pb-14">
+    <section className="mx-auto max-w-[1440px] px-6 pt-3 pb-10 md:px-10 md:pt-6 md:pb-14">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-14 items-center mb-6 md:mb-8">
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
@@ -43,16 +43,16 @@ export default function Hero() {
               placeholder="Search for a service..." 
               type="text"
             />
-            <button className="absolute right-3 top-1/2 -translate-y-1/2 bg-primary text-on-primary px-6 py-3 rounded-lg font-black text-sm uppercase tracking-wider hover:brightness-110 hover:-translate-y-[55%] hover:shadow-lg hover:shadow-primary/30 transition-all duration-300">
+            <button className="absolute right-3 top-1/2 -translate-y-1/2 rounded-lg bg-primary px-5 py-2.5 text-xs font-black uppercase tracking-[0.08em] text-on-primary transition-all duration-300 hover:-translate-y-[55%] hover:brightness-110 hover:shadow-lg hover:shadow-primary/30">
               Search
             </button>
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <button className="bg-primary text-on-primary px-8 py-4 rounded-xl font-black text-base md:text-lg shadow-xl shadow-primary/30 hover:brightness-110 hover:-translate-y-1 transition-all">
+            <button className="rounded-xl bg-primary px-7 py-3.5 text-sm font-black tracking-[0.04em] text-on-primary shadow-xl shadow-primary/30 transition-all hover:-translate-y-1 hover:brightness-110 md:text-base">
               Start Booking
             </button>
-            <button className="bg-surface-container-highest text-primary px-8 py-4 rounded-xl font-black text-base md:text-lg hover:bg-surface-container-high transition-all flex items-center gap-3">
+            <button className="flex items-center gap-3 rounded-xl bg-surface-container-highest px-7 py-3.5 text-sm font-black tracking-[0.04em] text-primary transition-all hover:bg-surface-container-high md:text-base">
               <PlayCircle className="w-6 h-6" /> View Work
             </button>
           </div>

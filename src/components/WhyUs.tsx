@@ -21,7 +21,7 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section className="py-10 md:py-14 px-6 md:px-10 max-w-[1440px] mx-auto overflow-hidden">
+    <section id="about" className="py-10 md:py-14 px-6 md:px-10 max-w-[1440px] mx-auto overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14 items-center">
         <motion.div 
           initial={{ opacity: 0, x: -50 }}

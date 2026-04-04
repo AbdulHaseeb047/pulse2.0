@@ -24,7 +24,7 @@ const products = [
 
 export default function Shop() {
   return (
-    <section className="py-10 md:py-14 bg-surface-container-low">
+    <section id="shop" className="py-10 md:py-14 bg-surface-container-low">
       <div className="max-w-[1440px] mx-auto px-6 md:px-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-8 md:mb-10 gap-4 md:gap-6">
           <div>

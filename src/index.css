@@ -39,12 +39,70 @@
     @apply overflow-x-hidden;
   }
 
+  html {
+    font-size: 15px;
+  }
+
   body {
-    @apply bg-background font-body text-on-background selection:bg-primary-container selection:text-on-primary-container;
+    @apply bg-background font-body text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container;
+  }
+
+  @media (min-width: 1024px) {
+    html {
+      font-size: 15.5px;
+    }
   }
 }
 
 @layer utilities {
+  .font-black {
+    font-weight: 700;
+  }
+
+  .text-6xl {
+    font-size: 3.25rem;
+    line-height: 0.98;
+  }
+
+  .text-5xl {
+    font-size: 2.45rem;
+    line-height: 1.03;
+  }
+
+  .text-4xl {
+    font-size: 2rem;
+    line-height: 1.06;
+  }
+
+  .text-3xl {
+    font-size: 1.65rem;
+    line-height: 1.12;
+  }
+
+  @media (min-width: 768px) {
+    .md\:text-5xl {
+      font-size: 2.7rem;
+      line-height: 1.02;
+    }
+
+    .md\:text-4xl {
+      font-size: 2.15rem;
+      line-height: 1.06;
+    }
+
+    .md\:text-\[6\.25rem\] {
+      font-size: 5rem;
+      line-height: 0.95;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .lg\:text-7xl {
+      font-size: 4.6rem;
+      line-height: 0.96;
+    }
+  }
+
   .glow-hover {
     transition: all 0.3s ease;
   }

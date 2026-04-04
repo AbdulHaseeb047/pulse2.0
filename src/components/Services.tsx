@@ -23,7 +23,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="py-10 md:py-14 px-6 md:px-10 max-w-[1440px] mx-auto">
+    <section id="services" className="py-10 md:py-14 px-6 md:px-10 max-w-[1440px] mx-auto">
       <div className="text-center mb-8 md:mb-10">
         <h2 className="font-headline text-4xl md:text-5xl font-extrabold mb-4 tracking-tighter">Professional Ecosystem</h2>
         <p className="text-on-surface-variant font-semibold text-base md:text-lg">Specialized solutions for every corner of your property.</p>

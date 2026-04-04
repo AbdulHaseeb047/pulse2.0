@@ -3,7 +3,7 @@ import { Calendar, MessageSquare, Phone } from "lucide-react";
 
 export default function CTA() {
   return (
-    <section className="relative py-10 md:py-14 mx-4 md:mx-10 mb-10 md:mb-12 rounded-xl overflow-hidden">
+    <section id="contact" className="relative py-10 md:py-14 mx-4 md:mx-10 mb-10 md:mb-12 rounded-xl overflow-hidden">
       <img 
         className="absolute inset-0 w-full h-full object-cover" 
         src="https://picsum.photos/seed/karachi-night/1920/1080" 
@@ -24,13 +24,13 @@ export default function CTA() {
           Get an instant quote or book a professional technician in under 60 seconds.
         </p>
         <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-          <button className="bg-primary text-on-primary px-6 md:px-8 py-3.5 md:py-4 rounded-xl font-black text-sm md:text-base flex items-center gap-2.5 transition-transform hover:scale-105 active:scale-95 shadow-xl shadow-primary/30 uppercase tracking-[0.14em]">
+          <button className="flex items-center gap-2.5 rounded-xl bg-primary px-6 py-3.5 text-xs font-black uppercase tracking-[0.08em] text-on-primary shadow-xl shadow-primary/30 transition-transform hover:scale-105 active:scale-95 md:px-8 md:py-4 md:text-sm">
             <Calendar className="w-5 h-5" /> Book Now
           </button>
-          <button className="bg-[#25D366] text-white px-6 md:px-8 py-3.5 md:py-4 rounded-xl font-black text-sm md:text-base flex items-center gap-2.5 transition-transform hover:scale-105 active:scale-95 shadow-xl shadow-green-500/20 uppercase tracking-[0.14em]">
+          <button className="flex items-center gap-2.5 rounded-xl bg-[#25D366] px-6 py-3.5 text-xs font-black uppercase tracking-[0.08em] text-white shadow-xl shadow-green-500/20 transition-transform hover:scale-105 active:scale-95 md:px-8 md:py-4 md:text-sm">
             <MessageSquare className="w-5 h-5" /> WhatsApp
           </button>
-          <button className="bg-white/10 backdrop-blur-xl text-white border-2 border-white/20 px-6 md:px-8 py-3.5 md:py-4 rounded-xl font-black text-sm md:text-base flex items-center gap-2.5 transition-transform hover:scale-105 active:scale-95 uppercase tracking-[0.14em]">
+          <button className="flex items-center gap-2.5 rounded-xl border-2 border-white/20 bg-white/10 px-6 py-3.5 text-xs font-black uppercase tracking-[0.08em] text-white backdrop-blur-xl transition-transform hover:scale-105 active:scale-95 md:px-8 md:py-4 md:text-sm">
             <Phone className="w-5 h-5" /> 0800-PULSE
           </button>
         </div>
