@@ -267,11 +267,14 @@ export default function ServicesPage() {
             </div>
 
             <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-              {filteredServices.map((service) => (
+              {filteredServices.map((service, index) => (
                 <motion.article
                   key={service.title}
+                  initial={{ opacity: 0, y: 30, scale: 0.98 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
                   whileHover={{ y: -6 }}
-                  transition={{ duration: 0.18 }}
+                  transition={{ duration: 0.35, delay: index * 0.06, ease: "easeOut" }}
                   className="group overflow-hidden rounded-2xl bg-white shadow-[0_12px_28px_rgba(0,0,0,0.08)] transition-all duration-200 hover:shadow-[0_18px_36px_rgba(0,0,0,0.14)]"
                 >
                   <div className="relative h-44 overflow-hidden">
@@ -331,7 +334,13 @@ export default function ServicesPage() {
             </div>
 
             <div className="mt-10 grid gap-6 lg:grid-cols-2">
-              <div className="rounded-3xl bg-[#bff0da] p-6 md:p-8">
+              <motion.div
+                initial={{ opacity: 0, x: -28 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.25 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                className="rounded-3xl bg-[#bff0da] p-6 md:p-8"
+              >
                 <h3 className="text-2xl font-black text-[#073d30]">Local Vendors</h3>
                 <p className="mt-2 text-sm text-[#59746a]">Standard market practices</p>
 
@@ -348,9 +357,15 @@ export default function ServicesPage() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="relative rounded-3xl border border-[#d2e7dd] bg-white p-6 shadow-[0_20px_45px_rgba(0,0,0,0.08)] md:p-8">
+              <motion.div
+                initial={{ opacity: 0, x: 28 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.25 }}
+                transition={{ duration: 0.4, delay: 0.08, ease: "easeOut" }}
+                className="relative rounded-3xl border border-[#d2e7dd] bg-white p-6 shadow-[0_20px_45px_rgba(0,0,0,0.08)] md:p-8"
+              >
                 <span className="absolute -top-3 right-6 rounded-full bg-[#0b8d5c] px-4 py-1 text-[10px] font-black uppercase tracking-[0.2em] text-white shadow-md">
                   Recommended
                 </span>
@@ -374,7 +389,7 @@ export default function ServicesPage() {
                 <button className="mt-8 w-full rounded-2xl bg-[#0a8f5f] px-5 py-4 text-sm font-black text-white shadow-lg transition-transform duration-200 hover:scale-[1.01]">
                   Book Premium Service
                 </button>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -413,11 +428,14 @@ export default function ServicesPage() {
             </div>
 
             <div className="mt-8 grid gap-5 md:grid-cols-2">
-              {corporateCards.map((card) => (
+              {corporateCards.map((card, index) => (
                 <motion.article
                   key={card.title}
+                  initial={{ opacity: 0, y: 24, scale: 0.985 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true, amount: 0.25 }}
                   whileHover={{ y: -5 }}
-                  transition={{ duration: 0.18 }}
+                  transition={{ duration: 0.35, delay: index * 0.08, ease: "easeOut" }}
                   className="relative overflow-hidden rounded-3xl shadow-[0_18px_40px_rgba(0,0,0,0.12)]"
                 >
                   <img src={card.image} alt={card.title} className="h-[250px] w-full object-cover md:h-[300px]" />
