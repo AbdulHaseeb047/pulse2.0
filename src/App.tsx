@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage.tsx";
 import ServicesPage from "./pages/ServicesPage.tsx";
 import ConnectPage from "./pages/ConnectPage.tsx";
 import AboutPage from "./pages/AboutPage.tsx";
+import ShopPage from "./pages/ShopPage";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/services" element={<ServicesPage />} />
+        <Route path="/shop" element={<ShopPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/connect" element={<ConnectPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
