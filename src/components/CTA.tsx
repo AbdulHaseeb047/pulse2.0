@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Calendar, MessageSquare, Phone } from "lucide-react";
+import { CONTACT } from "../content/contact";
 
 export default function CTA() {
   return (
@@ -31,7 +32,7 @@ export default function CTA() {
             <MessageSquare className="w-5 h-5" /> WhatsApp
           </button>
           <button className="flex items-center gap-2.5 rounded-xl border-2 border-white/20 bg-white/10 px-6 py-3.5 text-xs font-black uppercase tracking-[0.08em] text-white backdrop-blur-xl transition-transform hover:scale-105 active:scale-95 md:px-8 md:py-4 md:text-sm">
-            <Phone className="w-5 h-5" /> 0800-PULSE
+            <Phone className="w-5 h-5" /> {CONTACT.directLine}
           </button>
         </div>
       </motion.div>

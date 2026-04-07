@@ -253,8 +253,8 @@ export default function ShopPage() {
                   <ShoppingCart className="h-4 w-4" />
                 </div>
                 <div className="leading-tight">
-                  <p className="text-[9px] font-bold uppercase tracking-[0.14em] text-white/70">Your total</p>
-                  <p className="text-[11px] font-black uppercase tracking-[0.12em]">PKR 14,650</p>
+                  <p className="text-[9px] font-bold uppercase tracking-[0.14em] text-white/70">Cart preview</p>
+                  <p className="text-[11px] font-black uppercase tracking-[0.12em]">0 Items</p>
                 </div>
                 <button className="rounded-xl bg-white px-3 py-2 text-[10px] font-black uppercase tracking-[0.12em] text-[#083f31]">
                   View Cart <span aria-hidden="true">→</span>

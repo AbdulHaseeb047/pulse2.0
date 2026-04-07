@@ -13,6 +13,7 @@ import {
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PulseAssistant from "../components/PulseAssistant";
+import { CONTACT } from "../content/contact";
 
 const supportBadges = [
   "24/7 Support",
@@ -20,8 +21,7 @@ const supportBadges = [
   "Karachi-Wide",
 ];
 
-const HQ_MAP_QUERY = "Emerald Tower Clifton Karachi";
-const mapEmbedSrc = `https://maps.google.com/maps?q=${encodeURIComponent(HQ_MAP_QUERY)}&z=13&output=embed`;
+const mapEmbedSrc = `https://maps.google.com/maps?q=${encodeURIComponent(CONTACT.hqMapQuery)}&z=13&output=embed`;
 const liveMetrics = [
   { label: "Active Crews", value: "18" },
   { label: "Avg ETA", value: "24m" },
@@ -72,11 +72,11 @@ export default function ConnectPage() {
                   <div className="mt-6 grid gap-3 sm:grid-cols-2">
                     <div className="rounded-xl border border-[#bae2d2] bg-white/80 px-4 py-3.5">
                       <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#5f7b72]">Phone</p>
-                      <p className="mt-1.5 text-base font-semibold text-[#083f31]">0800-EMERALD</p>
+                      <p className="mt-1.5 text-base font-semibold text-[#083f31]">{CONTACT.directLine}</p>
                     </div>
                     <div className="rounded-xl border border-[#bae2d2] bg-white/80 px-4 py-3.5">
                       <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#5f7b72]">Email</p>
-                      <p className="mt-1.5 text-base font-semibold text-[#083f31]">pulse@emerald.pk</p>
+                      <p className="mt-1.5 text-base font-semibold text-[#083f31]">{CONTACT.email}</p>
                     </div>
                   </div>
                 </div>
@@ -97,8 +97,8 @@ export default function ConnectPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#02180f]/75 via-[#02180f]/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
-                  <p className="font-headline text-2xl font-black italic">Emerald Tower</p>
-                  <p className="text-sm text-white/85">Clifton, Karachi</p>
+                  <p className="font-headline text-2xl font-black italic">{CONTACT.hqName}</p>
+                  <p className="text-sm text-white/85">{CONTACT.hqArea}</p>
                 </div>
               </motion.article>
             </div>
@@ -240,7 +240,7 @@ export default function ConnectPage() {
                   <MapPin className="mt-0.5 h-4 w-4 text-[#8bf8c3]" />
                   <div>
                     <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#85c7ae]">Main Address</p>
-                    <p className="mt-1">Suite 402, Emerald Tower, Clifton, Karachi, 75600</p>
+                    <p className="mt-1">{CONTACT.addressFull}</p>
                   </div>
                 </div>
 
@@ -256,7 +256,7 @@ export default function ConnectPage() {
                   <Phone className="mt-0.5 h-4 w-4 text-[#8bf8c3]" />
                   <div>
                     <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#85c7ae]">Direct Line</p>
-                    <p className="mt-1">+92 21 3456 7890</p>
+                    <p className="mt-1">{CONTACT.directLine}</p>
                   </div>
                 </div>
 
@@ -264,7 +264,7 @@ export default function ConnectPage() {
                   <Mail className="mt-0.5 h-4 w-4 text-[#8bf8c3]" />
                   <div>
                     <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#85c7ae]">Support Mail</p>
-                    <p className="mt-1">connect@emerald.pk</p>
+                    <p className="mt-1">{CONTACT.email}</p>
                   </div>
                 </div>
               </div>
@@ -314,7 +314,7 @@ export default function ConnectPage() {
                   <div className="flex items-center justify-between gap-3">
                     <div>
                       <p className="text-[10px] font-bold uppercase tracking-[0.13em] text-[#8fe6c2]">Pinned Location</p>
-                      <p className="mt-1 text-sm font-semibold text-white">{HQ_MAP_QUERY}</p>
+                      <p className="mt-1 text-sm font-semibold text-white">{CONTACT.hqMapQuery}</p>
                     </div>
                     <span className="relative inline-flex h-3 w-3">
                       <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#8bf8c3] opacity-70" />

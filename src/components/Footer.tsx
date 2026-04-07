@@ -1,4 +1,5 @@
 import { Globe, Mail, Smartphone } from "lucide-react";
+import { CONTACT } from "../content/contact";
 
 export default function Footer() {
   return (
@@ -35,7 +36,7 @@ export default function Footer() {
         
         <div>
           <h6 className="mb-3 font-headline text-[11px] font-bold tracking-[0.14em] text-emerald-500 md:text-sm">Connect</h6>
-          <p className="mb-3 text-[11px] font-black normal-case text-white/40 md:text-sm">Phase 6, DHA, Karachi, PK</p>
+          <p className="mb-3 text-[11px] font-black normal-case text-white/40 md:text-sm">{CONTACT.addressShort}</p>
           <div className="flex gap-3">
             <Globe className="h-5 w-5 cursor-pointer text-white/40 transition-colors hover:text-emerald-400 md:h-6 md:w-6" />
             <Mail className="h-5 w-5 cursor-pointer text-white/40 transition-colors hover:text-emerald-400 md:h-6 md:w-6" />
