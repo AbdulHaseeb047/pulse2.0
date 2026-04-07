@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import { 
   Snowflake, 
   Sun, 
@@ -11,14 +12,14 @@ import {
 } from "lucide-react";
 
 const services = [
-  { icon: Snowflake, title: "AC Maintenance", desc: "Full chemical cleaning and gas refill for peak summer cooling." },
-  { icon: Sun, title: "Solar Solutions", desc: "End-to-end solar panel installation and inverter syncing." },
-  { icon: Zap, title: "Complete Wiring", desc: "Internal house wiring and switchboard repairs by experts." },
-  { icon: Refrigerator, title: "Electronics Repair", desc: "Washing machines, fridges, and microwave diagnostics." },
-  { icon: Droplets, title: "Plumbing Works", desc: "Fixing leaks, pressure pumps, and bathroom fittings." },
-  { icon: Shield, title: "CCTV Setup", desc: "Smart security surveillance installation with mobile access." },
-  { icon: Brush, title: "Deep Cleaning", desc: "Post-renovation or seasonal full house sanitization." },
-  { icon: Hammer, title: "General Fixes", desc: "All small fixes, furniture assembly, and odd jobs." },
+  { icon: Snowflake, title: "AC Maintenance", desc: "Full chemical cleaning and gas refill for peak summer cooling.", slug: "ac-maintenance" },
+  { icon: Sun, title: "Solar Solutions", desc: "End-to-end solar panel installation and inverter syncing.", slug: "solar-installation" },
+  { icon: Zap, title: "Complete Wiring", desc: "Internal house wiring and switchboard repairs by experts.", slug: "house-wiring" },
+  { icon: Refrigerator, title: "Electronics Repair", desc: "Washing machines, fridges, and microwave diagnostics.", slug: "consultancy" },
+  { icon: Droplets, title: "Plumbing Works", desc: "Fixing leaks, pressure pumps, and bathroom fittings.", slug: "consultancy" },
+  { icon: Shield, title: "CCTV Setup", desc: "Smart security surveillance installation with mobile access.", slug: "consultancy" },
+  { icon: Brush, title: "Deep Cleaning", desc: "Post-renovation or seasonal full house sanitization.", slug: "consultancy" },
+  { icon: Hammer, title: "General Fixes", desc: "All small fixes, furniture assembly, and odd jobs.", slug: "consultancy" },
 ];
 
 export default function Services() {
@@ -31,21 +32,26 @@ export default function Services() {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {services.map((service, i) => (
-          <motion.div 
+          <Link
             key={i}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.1 }}
-            className="bg-surface-container-lowest p-7 rounded-xl border border-primary/10 transition-all group cursor-pointer card-hover-premium"
+            to={`/services/${service.slug}`}
+            className="block"
           >
-            <service.icon className="w-10 h-10 text-primary mb-5 transition-colors duration-200 group-hover:text-white card-logo-motion" />
-            <h3 className="font-headline font-bold text-xl mb-2 transition-colors duration-200 group-hover:text-white">{service.title}</h3>
-            <p className="text-sm text-on-surface-variant mb-6 leading-relaxed transition-colors duration-200 group-hover:text-white/80">{service.desc}</p>
-            <span className="inline-block bg-secondary-container text-on-secondary-container text-[11px] font-black px-4 py-1.5 rounded-full uppercase tracking-wider transition-colors duration-200 group-hover:bg-white/15 group-hover:text-white group-hover:border group-hover:border-white/30">
-              With or Without Materials
-            </span>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="bg-surface-container-lowest p-7 rounded-xl border border-primary/10 transition-all group cursor-pointer card-hover-premium"
+            >
+              <service.icon className="w-10 h-10 text-primary mb-5 transition-colors duration-200 group-hover:text-white card-logo-motion" />
+              <h3 className="font-headline font-bold text-xl mb-2 transition-colors duration-200 group-hover:text-white">{service.title}</h3>
+              <p className="text-sm text-on-surface-variant mb-6 leading-relaxed transition-colors duration-200 group-hover:text-white/80">{service.desc}</p>
+              <span className="inline-block bg-secondary-container text-on-secondary-container text-[11px] font-black px-4 py-1.5 rounded-full uppercase tracking-wider transition-colors duration-200 group-hover:bg-white/15 group-hover:text-white group-hover:border group-hover:border-white/30">
+                With or Without Materials
+              </span>
+            </motion.div>
+          </Link>
         ))}
       </div>
     </section>

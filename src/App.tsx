@@ -2,9 +2,11 @@ import { BrowserRouter, Navigate, Route, Routes, useLocation } from "react-route
 import { useEffect } from "react";
 import HomePage from "./pages/HomePage.tsx";
 import ServicesPage from "./pages/ServicesPage.tsx";
+import ServiceDetailPage from "./pages/ServiceDetailPage.tsx";
 import ConnectPage from "./pages/ConnectPage.tsx";
 import AboutPage from "./pages/AboutPage.tsx";
 import ShopPage from "./pages/ShopPage";
+import BookingPage from "./pages/BookingPage.tsx";
 
 export default function App() {
   return (
@@ -13,9 +15,11 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/services" element={<ServicesPage />} />
+        <Route path="/services/:serviceSlug" element={<ServiceDetailPage />} />
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/connect" element={<ConnectPage />} />
+        <Route path="/book" element={<BookingPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

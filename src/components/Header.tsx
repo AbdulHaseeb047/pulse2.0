@@ -91,7 +91,7 @@ export default function Header() {
           <button className="hidden rounded-lg p-2 text-white/80 transition-all duration-300 hover:bg-white/10 lg:inline-flex">
             <Bot className="h-5 w-5" />
           </button>
-          <Link to="/connect" className="hidden rounded-lg bg-primary px-4 py-2 text-[11px] font-black uppercase tracking-[0.16em] text-on-primary shadow-md shadow-primary/20 transition-all hover:brightness-110 active:scale-95 lg:inline-flex lg:px-5 lg:py-2.5 lg:text-xs">
+          <Link to="/book" className="hidden rounded-lg bg-primary px-4 py-2 text-[11px] font-black uppercase tracking-[0.16em] text-on-primary shadow-md shadow-primary/20 transition-all hover:brightness-110 active:scale-95 lg:inline-flex lg:px-5 lg:py-2.5 lg:text-xs">
             Book Now
           </Link>
         </div>
@@ -150,7 +150,7 @@ export default function Header() {
                   transition={{ duration: 0.22, delay: 0.18, ease: "easeOut" }}
                 >
                   <Link
-                    to="/connect"
+                    to="/book"
                     className="mt-2 inline-flex w-full items-center justify-center rounded-xl bg-primary px-4 py-2.5 text-[11px] font-black uppercase tracking-[0.16em] text-on-primary shadow-[0_10px_20px_rgba(0,0,0,0.2)]"
                   >
                     Book Now

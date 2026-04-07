@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Search, PlayCircle, Bolt } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -49,9 +50,9 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <button className="rounded-xl bg-primary px-7 py-3.5 text-sm font-black tracking-[0.04em] text-on-primary shadow-xl shadow-primary/30 transition-all hover:-translate-y-1 hover:brightness-110 md:text-base">
+            <Link to="/book" className="rounded-xl bg-primary px-7 py-3.5 text-sm font-black tracking-[0.04em] text-on-primary shadow-xl shadow-primary/30 transition-all hover:-translate-y-1 hover:brightness-110 md:text-base">
               Start Booking
-            </button>
+            </Link>
             <button className="flex items-center gap-3 rounded-xl bg-surface-container-highest px-7 py-3.5 text-sm font-black tracking-[0.04em] text-primary transition-all hover:bg-surface-container-high md:text-base">
               <PlayCircle className="w-6 h-6" /> View Work
             </button>

@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Calendar, MessageSquare, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import { CONTACT } from "../content/contact";
 
 export default function CTA() {
@@ -25,9 +26,9 @@ export default function CTA() {
           Get an instant quote or book a professional technician in under 60 seconds.
         </p>
         <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-          <button className="flex items-center gap-2.5 rounded-xl bg-primary px-6 py-3.5 text-xs font-black uppercase tracking-[0.08em] text-on-primary shadow-xl shadow-primary/30 transition-transform hover:scale-105 active:scale-95 md:px-8 md:py-4 md:text-sm">
+          <Link to="/book" className="flex items-center gap-2.5 rounded-xl bg-primary px-6 py-3.5 text-xs font-black uppercase tracking-[0.08em] text-on-primary shadow-xl shadow-primary/30 transition-transform hover:scale-105 active:scale-95 md:px-8 md:py-4 md:text-sm">
             <Calendar className="w-5 h-5" /> Book Now
-          </button>
+          </Link>
           <button className="flex items-center gap-2.5 rounded-xl bg-[#25D366] px-6 py-3.5 text-xs font-black uppercase tracking-[0.08em] text-white shadow-xl shadow-green-500/20 transition-transform hover:scale-105 active:scale-95 md:px-8 md:py-4 md:text-sm">
             <MessageSquare className="w-5 h-5" /> WhatsApp
           </button>

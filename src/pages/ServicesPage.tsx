@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   ArrowRight,
   CheckCircle2,
@@ -14,6 +15,7 @@ import Footer from "../components/Footer";
 
 const services = [
   {
+    slug: "ac-maintenance",
     title: "AC Maintenance",
     desc: "Complete deep cleaning, gas refill, and efficiency optimization for peak cooling.",
     image: "https://picsum.photos/seed/emerald-ac/700/500",
@@ -23,6 +25,7 @@ const services = [
     category: "AC Maintenance",
   },
   {
+    slug: "electrician",
     title: "Electrician",
     desc: "Emergency fault detection, DB dressing, and general electrical repair.",
     image: "https://picsum.photos/seed/emerald-electrician/700/500",
@@ -32,6 +35,7 @@ const services = [
     category: "Electrical",
   },
   {
+    slug: "solar-installation",
     title: "Solar Installation",
     desc: "Tier-1 solar solutions with net metering and high-efficiency inverter support.",
     image: "https://picsum.photos/seed/emerald-solar/700/500",
@@ -41,6 +45,7 @@ const services = [
     category: "Solar",
   },
   {
+    slug: "chiller-installation",
     title: "Chiller Services",
     desc: "Commercial-grade cooling support for buildings, malls, and industrial sites.",
     image: "https://picsum.photos/seed/emerald-chiller/700/500",
@@ -50,6 +55,7 @@ const services = [
     category: "Contracts",
   },
   {
+    slug: "consultancy",
     title: "Consultancy",
     desc: "On-site technical planning, equipment audits, and maintenance strategy for properties.",
     image: "https://picsum.photos/seed/emerald-consultancy/700/500",
@@ -306,9 +312,9 @@ export default function ServicesPage() {
                         </span>
                       ))}
                     </div>
-                    <button className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#f8bf3d] px-5 py-2.5 text-sm font-black text-[#103f32] transition-all duration-200 hover:scale-[1.04] hover:bg-[#ffcf5f] hover:shadow-lg">
+                    <Link to={`/services/${service.slug}`} className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#f8bf3d] px-5 py-2.5 text-sm font-black text-[#103f32] transition-all duration-200 hover:scale-[1.04] hover:bg-[#ffcf5f] hover:shadow-lg">
                       View Service <ArrowRight className="h-4 w-4" />
-                    </button>
+                    </Link>
                   </div>
                 </motion.article>
               ))}

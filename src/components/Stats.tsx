@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Wrench, ShoppingCart, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Stats() {
   return (
@@ -28,34 +29,38 @@ export default function Stats() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
           <motion.div 
             whileHover={{ scale: 1.02 }}
-            className="bg-[#006947] p-6 md:p-7 rounded-xl flex items-center justify-between group cursor-pointer transition-all hover:brightness-110 shadow-xl"
+            className="bg-[#006947] p-6 md:p-7 rounded-xl transition-all hover:brightness-110 shadow-xl"
           >
-            <div className="flex items-center gap-6 md:gap-8">
-              <div className="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center">
-                <Wrench className="text-white w-10 h-10 card-logo-motion" />
+            <Link to="/services" className="flex items-center justify-between group cursor-pointer">
+              <div className="flex items-center gap-6 md:gap-8">
+                <div className="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center">
+                  <Wrench className="text-white w-10 h-10 card-logo-motion" />
+                </div>
+                <div>
+                  <h3 className="text-white font-headline font-extrabold text-2xl tracking-tight mb-1">TECHNICAL SERVICES</h3>
+                  <p className="text-white/70 font-semibold text-base">Wiring, Plumbing, AC & Repairs</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-white font-headline font-extrabold text-2xl tracking-tight mb-1">TECHNICAL SERVICES</h3>
-                <p className="text-white/70 font-semibold text-base">Wiring, Plumbing, AC & Repairs</p>
-              </div>
-            </div>
-            <ArrowRight className="text-white w-8 h-8 group-hover:translate-x-3 transition-transform" />
+              <ArrowRight className="text-white w-8 h-8 group-hover:translate-x-3 transition-transform" />
+            </Link>
           </motion.div>
 
           <motion.div 
             whileHover={{ scale: 1.02 }}
-            className="bg-[#ffca4d] p-6 md:p-7 rounded-xl flex items-center justify-between group cursor-pointer transition-all hover:brightness-105 shadow-xl"
+            className="bg-[#ffca4d] p-6 md:p-7 rounded-xl transition-all hover:brightness-105 shadow-xl"
           >
-            <div className="flex items-center gap-6 md:gap-8">
-              <div className="w-16 h-16 bg-black/5 rounded-xl flex items-center justify-center">
-                <ShoppingCart className="text-on-secondary-container w-10 h-10 card-logo-motion" />
+            <Link to="/shop" className="flex items-center justify-between group cursor-pointer">
+              <div className="flex items-center gap-6 md:gap-8">
+                <div className="w-16 h-16 bg-black/5 rounded-xl flex items-center justify-center">
+                  <ShoppingCart className="text-on-secondary-container w-10 h-10 card-logo-motion" />
+                </div>
+                <div>
+                  <h3 className="text-on-secondary-container font-headline font-extrabold text-2xl tracking-tight mb-1">SHOP & INSTALL</h3>
+                  <p className="text-on-secondary-container/70 font-semibold text-base">Solar, Inverters & Electronics</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-on-secondary-container font-headline font-extrabold text-2xl tracking-tight mb-1">SHOP & INSTALL</h3>
-                <p className="text-on-secondary-container/70 font-semibold text-base">Solar, Inverters & Electronics</p>
-              </div>
-            </div>
-            <ArrowRight className="text-on-secondary-container w-8 h-8 group-hover:translate-x-3 transition-transform" />
+              <ArrowRight className="text-on-secondary-container w-8 h-8 group-hover:translate-x-3 transition-transform" />
+            </Link>
           </motion.div>
         </div>
       </div>

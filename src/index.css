@@ -40,7 +40,7 @@
   }
 
   html {
-    font-size: 15px;
+    font-size: 13.5px;
   }
 
   body {
@@ -49,7 +49,7 @@
 
   @media (min-width: 1024px) {
     html {
-      font-size: 15.5px;
+      font-size: 14.5px;
     }
   }
 }
@@ -60,34 +60,34 @@
   }
 
   .text-6xl {
-    font-size: 3.25rem;
-    line-height: 0.98;
+    font-size: 2.8rem;
+    line-height: 1;
   }
 
   .text-5xl {
-    font-size: 2.45rem;
-    line-height: 1.03;
+    font-size: 2.1rem;
+    line-height: 1.05;
   }
 
   .text-4xl {
-    font-size: 2rem;
-    line-height: 1.06;
+    font-size: 1.72rem;
+    line-height: 1.1;
   }
 
   .text-3xl {
-    font-size: 1.65rem;
-    line-height: 1.12;
+    font-size: 1.4rem;
+    line-height: 1.15;
   }
 
   @media (min-width: 768px) {
     .md\:text-5xl {
-      font-size: 2.7rem;
-      line-height: 1.02;
+      font-size: 2.3rem;
+      line-height: 1.04;
     }
 
     .md\:text-4xl {
-      font-size: 2.15rem;
-      line-height: 1.06;
+      font-size: 1.85rem;
+      line-height: 1.08;
     }
 
     .md\:text-\[6\.25rem\] {
@@ -98,8 +98,8 @@
 
   @media (min-width: 1024px) {
     .lg\:text-7xl {
-      font-size: 4.6rem;
-      line-height: 0.96;
+      font-size: 4.25rem;
+      line-height: 0.98;
     }
   }
 

@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { ShoppingCart, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const products = [
   { 
@@ -31,9 +32,9 @@ export default function Shop() {
             <h2 className="font-headline text-4xl md:text-5xl font-extrabold mb-3 tracking-tighter">Shop & Get It Installed</h2>
             <p className="text-on-surface-variant text-base md:text-lg font-medium">Curated electronics with guaranteed professional setup.</p>
           </div>
-          <button className="text-primary font-black text-base md:text-lg flex items-center gap-2.5 hover:translate-x-2 transition-transform uppercase tracking-widest">
+          <Link to="/shop" className="text-primary font-black text-base md:text-lg flex items-center gap-2.5 hover:translate-x-2 transition-transform uppercase tracking-widest">
             Explore Full Shop <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
-          </button>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
